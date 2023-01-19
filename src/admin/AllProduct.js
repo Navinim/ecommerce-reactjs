@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react'
 import './admin-css/allproduct.css'
 import { DataGrid } from '@mui/x-data-grid';
 import { Link } from 'react-router-dom'
-import { isAuthenticated } from '../components/auth'
+// import { isAuthenticated } from '../components/auth'
 import AdminNav from './AdminNav'
 import AdminSideBar from './AdminSideBar'
 import { getProducts } from './apiAdmin'
 
 const AllProduct = () => {
     const [products, setProducts] = useState([])
-    const { token } = isAuthenticated()
+    // const { token } = isAuthenticated()
 
     const loadProduct = () => {
         getProducts().then(data => {
